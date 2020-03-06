@@ -1,15 +1,22 @@
 // To-Do List:
-// Assign X and O to player and Computer
-// Make click function to store/display which square user clicked in & display his 'playing piece x/o'
-
+// 1) Assign X and O to player and Computer by trying out a new (newly found) approach of popping up an alert to store which 'playPiece' (X or O) the user wants
+// 2) Make click function to store/display which square user clicked in & display his 'playing piece x/o'
 
 
 var content = document.getElementById('content');
 
-var ticTacToe;
 
-// creating array to store the play-piece symbols
-var playPiece = ["X","O"];
+
+// coded out temporarily : var ticTacToe;
+
+// create function?? to store steps in determining players symbol/play-piece and computer's
+// creating a prompt to store the user/human-player's 'play piece' symbol selection
+
+// function pickPiece() {
+//     var playPiece = prompt('Select your symbol: X or O');
+//     alert('You picked ' + playPiece '!')
+// };
+
 
 // Just going to declare two variables to hold info for both players
 var playerX;
@@ -23,7 +30,7 @@ function clickFunc (clicked_id) {
 }
 
 
-content.innerHTML = renderGame(ticTacToe);
+content.innerHTML = renderGame();
 
 
 
@@ -37,20 +44,21 @@ function renderGame(game) {
         <div class="container d-flex flex-column justify-content-start align-items-center">
             <h4>It's player O's turn!</h4>
             <div class="w-50 text-center">
-                <button id="11" onclick="clickFunc(this.id)">-</button>
-                <button id="12" onclick="clickFunc(this.id)">-</button>
-                <button id="13" onclick="clickFunc(this.id)">-</button>
+                <button class="board-button" id="1-1" onclick="clickFunc(this.id)">-</button>
+                <button class="board-button" id="1-2" onclick="clickFunc(this.id)">-</button>
+                <button class="board-button" id="1-3" onclick="clickFunc(this.id)">-</button>
             </div>
             <div class="w-50 text-center">
-                <button onclick="clickFunc">-</button>
-                <button onclick="clickFunc">-</button>
-                <button onclick="clickFunc">-</button>
+                <button class="board-button" id="2-1" onclick="clickFunc(this.id)">-</button>
+                <button class="board-button" id="2-2" onclick="clickFunc(this.id)">-</button>
+                <button class="board-button" id="2-3" onclick="clickFunc(this.id)">-</button>
             </div>
             <div class="w-50 text-center">
-                <button onclick="clickFunc">-</button>
-                <button onclick="clickFunc">-</button>
-                <button onclick="clickFunc">-</button>
+                <button class="board-button" id="3-1" onclick="clickFunc(this.id)">-</button>
+                <button class="board-button" id="3-2" onclick="clickFunc(this.id)">-</button>
+                <button class="board-button" id="3-3" onclick="clickFunc(this.id)">-</button>
             </div>
         </div>
+        
     `
 }
