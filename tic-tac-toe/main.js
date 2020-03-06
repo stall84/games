@@ -12,22 +12,25 @@ var content = document.getElementById('content');
 // create function?? to store steps in determining players symbol/play-piece and computer's
 // creating a prompt to store the user/human-player's 'play piece' symbol selection
 
-// function pickPiece() {
-//     var playPiece = prompt('Select your symbol: X or O');
-//     alert('You picked ' + playPiece '!')
-// };
+
 
 
 // Just going to declare two variables to hold info for both players
 var playerX;
 var playerO;
 
+function pickPiece () {
+    var playPiece = prompt('Select your symbol: X or O');
+    alert('You picked ' + playPiece + '!')
+    return playPiece;
+};
+
 function clickFunc (clicked_id) {
 
     alert(clicked_id);
 
 
-}
+};
 
 
 content.innerHTML = renderGame();
@@ -39,6 +42,10 @@ function renderGame(game) {
 
     // Created onclick attributes ref'ing the click function we're making above. Also added the 'this.id' parameter
     // to test out and give reference to each button.
+
+
+
+
 
     return `
         <div class="container d-flex flex-column justify-content-start align-items-center">
