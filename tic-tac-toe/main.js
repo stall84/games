@@ -9,31 +9,64 @@ var content = document.getElementById('content');
 
 // coded out temporarily : var ticTacToe;
 
-// create function?? to store steps in determining players symbol/play-piece and computer's
+// create function to store steps in determining players symbol/play-piece and computer's
 // creating a prompt to store the user/human-player's 'play piece' symbol selection
 
-
-
-
-// Just going to declare two variables to hold info for both players
-var playerX;
-var playerO;
+var playPiece;
 
 function pickPiece () {
-    var playPiece = prompt('Select your symbol: X or O');
+
+    var playPiece = prompt('Select your symbol: X or O').toUpperCase();
     alert('You picked ' + playPiece + '!')
     return playPiece;
+    
 };
+
+
 
 function clickFunc (clicked_id) {
 
+    
+
     alert(clicked_id);
 
+    
+    
 
 };
 
 
+
 content.innerHTML = renderGame();
+
+
+var button11 = document.getElementById('1-1').addEventListener('click', function(button) {
+    button.innerHTML = playPiece;
+});
+var button12 = document.getElementById('1-2').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
+var button13 = document.getElementById('1-3').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
+var button21 = document.getElementById('2-1').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
+var button22 = document.getElementById('2-2').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
+var button23 = document.getElementById('2-3').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
+var button31 = document.getElementById('3-1').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
+var button32 = document.getElementById('3-2').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
+var button33 = document.getElementById('3-3').addEventListener('click',function(button) {
+    button.innerHTML = playPiece;
+});
 
 
 
@@ -44,7 +77,7 @@ function renderGame(game) {
     // to test out and give reference to each button.
 
 
-
+    
 
 
     return `
